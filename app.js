@@ -46,13 +46,7 @@ app.use(function(req, res, next){     // used for showing signed in as and wheth
     next();
 });
 
-seedDB();
-var campgrounds = [
-            {name :"Heaven's Overpass", image :"https://farm5.staticflickr.com/4113/5193321637_f6cd908e17.jpg"},
-            {name :"Hanging Rock", image :"https://images.unsplash.com/photo-1445308394109-4ec2920981b1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=7de12efa9efd5d176511b6caf1c99e5a"},
-            {name :"Green Paddock", image:"https://images.unsplash.com/photo-1434987215074-1caeadb28cf8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=a9a51ee15143440a3a518cae1561f2be"},
-            {name :"Haiti", image:"https://farm2.staticflickr.com/1274/4670974422_ec49d65ab2.jpg"}
-        ]   
+
 
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
