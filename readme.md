@@ -1,39 +1,140 @@
-# YelpCamp
+#YelpCamp
 
-![Image 1](https://raw.githubusercontent.com/himanshup/yelp-camp/master/screenshots/image1.png)  
-![Image 2](https://raw.githubusercontent.com/himanshup/yelp-camp/master/screenshots/image2.png)  
+##Initial Setup
+* Add Landing Page
+* Add Campgrounds Page that lists all campgrounds
 
-YelpCamp is a website where users can create and review campgrounds. In order to review or create a campground, you must have an account. This project was part of Colt Steele's web dev course on udemy.  
+Each Campground has:
+   * Name
+   * Image
 
-This project was created using Node.js, Express, MongoDB, and Bootstrap. Passport.js was used to handle authentication.  
+##Layout and Basic Styling
+* Create our header and footer partials
+* Add in Bootstrap
 
-## Features
-* Users can create, edit, and remove campgrounds
-* Users can review campgrounds once, and edit or remove their review
-* User profiles include more information on the user (full name, email, phone, join date), their campgrounds, and the option to edit their profile or delete their account
-* Search campground by name or location
-* Sort campgrounds by highest rating, most reviewed, lowest price, or highest price
+##Creating New Campgrounds
+* Setup new campground POST route
+* Add in body-parser
+* Setup route to show form
+* Add basic unstyled form
 
-## Run it locally
-1. Install [mongodb](https://www.mongodb.com/)
-2. Create a cloudinary account to get an API key and secret code
+##Style the campgrounds page
+* Add a better header/title
+* Make campgrounds display in a grid
 
-```
-git clone https://github.com/himanshup/yelpcamp.git
-cd yelpcamp
-npm install
-```
+##Style the Navbar and Form
+* Add a navbar to all templates
+* Style the new campground form
 
-Create a .env file (or just export manually in the terminal) in the root of the project and add the following:  
+##Add Mongoose
+* Install and configure Mongoose
+* Setup campground model
+* Use campground model inside of our routes
 
-```
-DATABASEURL='<url>'
-API_KEY=''<key>
-API_SECRET='<secret>'
-```
+##Show Page
+* Review the RESTful routes we've seen so far
+* Add description to our campground model
+* Show db.collection.drop()
+* Add a show route/template
 
-Run ```mongod``` in another terminal and ```node app.js``` in the terminal with the project.  
+##Refactor Mongoose Code
+* Create a models directory
+* Use module.exports
+* Require everything correctly!
 
-Then go to [localhost:3000](http://localhost:3000/).
+##Add Seeds File
+* Add a seeds.js file
+* Run the seeds file every time the server starts
 
-To get google maps working check [this](https://github.com/nax3t/google-maps-api) out.
+##Add the Comment model!
+* Make our errors go away!
+* Display comments on campground show page
+
+##Comment New/Create
+* Discuss nested routes
+* Add the comment new and create routes
+* Add the new comment form
+
+##Style Show Page
+* Add sidebar to show page
+* Display comments nicely
+
+##Finish Styling Show Page
+* Add public directory
+* Add custom stylesheet
+
+##Auth Pt. 1 - Add User Model
+* Install all packages needed for auth
+* Define User model 
+
+##Auth Pt. 2 - Register
+* Configure Passport
+* Add register routes
+* Add register template
+
+##Auth Pt. 3 - Login
+* Add login routes
+* Add login template
+
+##Auth Pt. 4 - Logout/Navbar
+* Add logout route
+* Prevent user from adding a comment if not signed in
+* Add links to navbar
+
+##Auth Pt. 5 - Show/Hide Links
+* Show/hide auth links in navbar 
+
+##Refactor The Routes
+* Use Express router to reoragnize all routes
+
+##Users + Comments
+* Associate users and comments
+* Save author's name to a comment automatically
+
+##Users + Campgrounds
+* Prevent an unauthenticated user from creating a campground
+* Save username+id to newly created campground
+
+
+TODOS
+* Add "back" redirect to login
+* Add method-override
+* BOOTSTRAP NAV COLLPASE JS
+* Flash Messages
+* Refactor container div to header
+* Show/hide delete and update buttons
+* style login/register forms
+* Random Background Landing Page
+* Refactor middleware
+* change styling in show template - comment delete/update
+* UPATE/DELETE CAMPGROUND
+
+* BOOTSTRAP NAV COLLPASE JS
+* Flash Messages
+* Refactor container div to header
+* Show/hide delete and update buttons
+* style login/register forms
+* Random Background Landing Page
+* Refactor middleware
+* change styling in show template - comment delete/update
+* UPDATE/DELETE CAMPGROUND
+
+
+
+
+RESTFUL ROUTES
+
+name      url      verb    desc.
+===============================================
+INDEX   /dogs      GET   Display a list of all dogs
+NEW     /dogs/new  GET   Displays form to make a new dog
+CREATE  /dogs      POST  Add new dog to DB
+SHOW    /dogs/:id  GET   Shows info about one dog
+
+INDEX   /campgrounds
+NEW     /campgrounds/new
+CREATE  /campgrounds
+SHOW    /campgrounds/:id
+
+NEW     campgrounds/:id/comments/new    GET
+CREATE  campgrounds/:id/comments      POST
