@@ -1,24 +1,70 @@
-# deployed
-My first project Yelpcamp
-This project was part of the course I joined on www.udemy.com.
+# YelpCamp
+YelpCamp is a project that was completed as a part of [Colt Steele's Web Development Bootcamp course (Udemy)](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview).
 
-You can view the running application at https://protected-hollows-85414.herokuapp.com.
+## Description
+YelpCamp is based on the popular Yelp.com , the difference being it focuses on the campgrounds that any host/owner can post for the users across the globe to check and review.
+
+The application is hosted on heroku and can be accessed at the below web address  
+https://yelpcamp-vijay1.herokuapp.com/
+
+## Functionalities
+- Everyone can view the camps and reviews without signing up or logging in.
+- The user will have to login to edit the campground details or any comments.
+- The user can only edit/delete the campgrounds and comments that they have added.
+- All the data will pe persistent and is stored in the awazon cloud.
+
+## Technologies Used:
+
+- **HTML5**  - markup language for creating web pages and web applications  
+- **CSS3**   - used for describing the presentation of a document written in a markup language  
+- **Bootstrap** - free and open-source front-end web framework for designing websites and web applications quickly  
+- **jQuery** - cross-platform JavaScript library designed to simplify the client-side scripting of HTML  
+- **DOM Manipulation** - is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document  
+- **Node.js** - pen-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side  
+- **Express.js** - for building web applications and APIs and connecting middleware  
+- **REST** - REST (REpresentational State Transfer) is an architectural style for developing web services  
+- **MongoDB** - open-source cross-platform document-oriented NoSQL database program to store details like users info, campgrounds info and comments  
+- **PassportJS** - authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application  
+- **Data Associations** - associating user data with the respective campgrounds and comments using reference method  
+- **Heroku** - cloud platform as a service used as a web application deployment model  
+- **AWS** - mongodb is hosted on amazon ec2 instance  
 
 
-How to run the application :-
-1. Download the clone.
-2. Please have nodejs and mongodb installed locally on your machine.
-3. Open cmd and go to the directory having app.js.
-4. Run npm start. ( this will install the required npm modules).
-5. Setup mongodb on your system.
-6. Open new terminal and go to C:/mongodb/bin (or where your mongodb is installed).
-7. Run mongod. (This will start mongodb server).
-8. After mongodb server is running, Go to previous terminal and in the same directory having app.js, run node app.js.
-9. This will start the server locally.
-10. Go to browser at ://localhost:3000.
+## Homepage
+Changing background that fades away making space for a new background to show.
 
-Slight modification in code for running locally :-
-1. Open app.js.
-2. Comment #21(mongoose.connect("mongodb://yelpcampdb:password@ds147789.mlab.com:47789/yelpcamp");) and uncomment line no 19
-   (mongoose.connect("mongodb://localhost/yelp_db_v7");). This will be running mongodb locally.
-3. In #61 change "process.env.PORT" to "3000".
+![Alt text](images/homepage1.png?raw=true)  
+
+![Alt text](images/homepage2.png?raw=true)  
+
+## Show all Campgrounds
+![Alt text](images/campgrounds.png?raw=true) 
+
+## Selected Campground
+![Alt text](images/selected_campground.png?raw=true)  
+
+## Sign Up
+![Alt text](images/signup.png?raw=true)  
+
+## Log in
+![Alt text](images/login.png?raw=true)  
+
+## Add new campground
+![Alt text](images/addnewcampground.png?raw=true)  
+
+## Add new comment
+![Alt text](images/addnewcomment.png?raw=true)  
+
+
+## Deployment:
+
+- In the app.js use - > mongoose.connect('mongodb://localhost/yelp_camp'); (if mongodb is running on localhost).  
+- I have used -> mongoose.connect(process.env.DATABASEURL); and have set DATABASEURL as environment variable in my heroku to maintain security.
+
+
+
+ 
+
+
+
+
